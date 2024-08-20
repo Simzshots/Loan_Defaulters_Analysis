@@ -77,8 +77,9 @@ In this report, the concept of content exploration is examined, involving a comp
 Here, some contents have been presented below in Figure 2, which can assist in gaining insights into the dataset. These contents offer valuable information that can contribute to a better understanding of the dataset and its underlying characteristics. By examining the provided contents, significant insights can be derived, enabling a deeper understanding of the dataset and its potential implications.
 
 ![Figure 2- Contents of data set.](images/Content.png)
-_Figure 2- Contents of data set._  
-In Figure 2, the utilization of the PROC CONTENTS procedure provides a comprehensive and detailed breakdown of the dataset. This step was crucial in gaining a thorough understanding of the dataset and making informed decisions regarding subsequent analysis. By conducting the PROC CONTENTS procedure, a deeper comprehension of the dataset's structure and characteristics was obtained. It allowed for a comprehensive overview of all the variables, their respective data types, and the formats in which the data is represented.
+_Fig 2.- Contents of data set._  
+
+In Fig 2, the utilization of the PROC CONTENTS procedure provides a comprehensive and detailed breakdown of the dataset. This step was crucial in gaining a thorough understanding of the dataset and making informed decisions regarding subsequent analysis. By conducting the PROC CONTENTS procedure, a deeper comprehension of the dataset's structure and characteristics was obtained. It allowed for a comprehensive overview of all the variables, their respective data types, and the formats in which the data is represented.
 
 #### 3.1.3. DATA CLEANING  
 Data cleaning is an essential step in any data analysis endeavor. It entails finding and rectifying any data errors, inconsistencies, or inaccuracies. During the data cleaning process of the loan defaulter dataset, several variables that were considered unsuitable for the model were removed. Specifically, variables such as SK_ID_CURR, FLAG_MOBIL, OCCUPATION_TYPE, REGION_RATING_CLIENT, REG_REGION_NOT_LIVE_REGION, and CNT_FAMILY_MEMBERS were excluded from the dataset. The decision to remove these variables was driven by the intention to eliminate potential confounding factors that could impact the accuracy and reliability of the model.
