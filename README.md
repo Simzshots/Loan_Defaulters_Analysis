@@ -137,16 +137,21 @@ A crucial part of data analysis is descriptive analysis, which focuses on enumer
 Researchers may immediately comprehend key aspects of the data through descriptive analysis using visualisations, spot anomalies or outliers, look for probable trends, and contrast different variables or groupings. It gives a thorough breakdown of all the dataset's key features, allowing researchers to develop their first conclusions and theories. Overall, integrating visuals in descriptive analysis helps people grasp data better, communicate clearly, and provides a solid foundation for additional research and interpretation. The visualizations of some useful information in the dataset were created to throw insights into the dataset.
 
 ![Figure 5. Pie Chart of Employment Status.](images/5.png)
+
 _Fig 5. Pie Chart of Employment Status_
+
 In Fig 5, the proportion of each employment status in the dataset is depicted through a pie chart. It can be observed that the "Working" employment status exhibits the highest frequency, while the "State Servant" status demonstrates the lowest frequency. By analysing the pie chart, insights are derived regarding the distribution of employment statuses within the dataset. The chart effectively presents the relative proportions, allowing for a visual understanding of the dominance of the "Working" category and the comparatively lower representation of the "State Servant" category.
 
 ![Figure 6. Bar Chart showing the Frequency of Loan Types](images/6.png)
+
 _Fig 6. Bar Chart showing the Frequency of Loan Types_
 
 Fig 6 shows a bar chart with the frequency distribution of each loan type. According to the graph, "Cash loans" occur noticeably more frequently than "Revolving loans". The discrepancy in frequency between the two loan types can be seen by looking at the bar chart. It becomes clear that "Cash loans" are predominant, indicating that there is a greater demand or desire for this loan type than for "Revolving loans."
 
 ![Fig 7. Bar Chart comparing Employment Status to Loan Type](images/7.png)
+
 _Fig 7. Bar Chart comparing Employment Status to Loan Type_
+
 In Fig 7, a bar chart is utilized to depict the frequency distribution of loan types across different employment statuses. The chart reveals that "Cash loans" are preferred significantly more by all employment statuses compared to "Revolving loans." Furthermore, among the employment statuses, the "Working" category exhibits the highest frequency for both loan types. By examining the bar chart, it becomes evident that "Cash loans" are favoured across all employment statuses, irrespective of the specific category. This finding suggests a general preference for "Cash loans" over "Revolving loans" within the dataset. Additionally, the observation that the "Working" employment status demonstrates the highest frequency for both loan types indicates that individuals in this category have a higher tendency to seek both "Cash loans" and "Revolving loans."
 
 #### 3.2.3. CORRELATION ANALYSIS
@@ -176,9 +181,11 @@ The logistic regression analysis results reveal interesting insights into the re
 This is shown in the figures 9 and 10 below.
 
 ![Fig 9.](images/9.png)
+
 _Fig 9. Logistic Regression Results_
 
 ![Fig 10.](images/10.png)
+
 _Fig 10. ROC Curve_
 
 
