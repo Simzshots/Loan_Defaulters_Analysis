@@ -53,7 +53,6 @@ The UML has 3 stages, namely:
   - Regression Analysis
 - **DATA POST-PROCESSING**
   - Result interpretation
-
 The analytics design is represented by a UML diagram in Fig 1 given below.
 ![UML Diagram](images/UML.png)
 UML Diagram
