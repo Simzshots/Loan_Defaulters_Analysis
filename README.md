@@ -131,47 +131,161 @@ _Fig 3. Distribution of the data set_
 ![Fig 3. Distribution of the data set](images/4.png)
 _Fig 4. Distribution of the data set_
 
-#### 3.2.2. DISTRIBUTION ANALYSIS
+#### 3.2.2. DESCRIPTIVE ANALYSIS
 
-Distribution analysis focuses on examining how the values of a variable are spread or distributed. Understanding the distribution of variables such as `Client_Income` and `Amount_Requested` can provide insights into the financial behavior of the clients.
+A crucial part of data analysis is descriptive analysis, which focuses on enumerating and defining a dataset's key features. To shed light on the distribution, central tendency, variability, and linkages within the data, a variety of statistical measurements and visualisations are used. The ability to portray data in a way that is both aesthetically pleasing and simple to grasp is one of the key functions of visuals in descriptive analysis. Researchers can successfully express important patterns, trends, and linkages within the dataset by using visuals like charts, graphs, and plots.
+Researchers may immediately comprehend key aspects of the data through descriptive analysis using visualisations, spot anomalies or outliers, look for probable trends, and contrast different variables or groupings. It gives a thorough breakdown of all the dataset's key features, allowing researchers to develop their first conclusions and theories. Overall, integrating visuals in descriptive analysis helps people grasp data better, communicate clearly, and provides a solid foundation for additional research and interpretation. The visualizations of some useful information in the dataset were created to throw insights into the dataset.
 
-In this study, the distribution of key variables is analyzed to identify patterns. For instance, histograms and density plots are used to visualize the income distribution among clients. This analysis helps to detect any skewness or anomalies in the data that could affect the model's performance.
+![Figure 5. Pie Chart of Employment Status.](images/5.png)
+_Fig 5. Pie Chart of Employment Status_
+In Fig 5, the proportion of each employment status in the dataset is depicted through a pie chart. It can be observed that the "Working" employment status exhibits the highest frequency, while the "State Servant" status demonstrates the lowest frequency. By analysing the pie chart, insights are derived regarding the distribution of employment statuses within the dataset. The chart effectively presents the relative proportions, allowing for a visual understanding of the dominance of the "Working" category and the comparatively lower representation of the "State Servant" category.
+
+![Figure 6. Bar Chart showing the Frequency of Loan Types](images/6.png)
+_Fig 6. Bar Chart showing the Frequency of Loan Types_
+
+Fig 6 shows a bar chart with the frequency distribution of each loan type. According to the graph, "Cash loans" occur noticeably more frequently than "Revolving loans". The discrepancy in frequency between the two loan types can be seen by looking at the bar chart. It becomes clear that "Cash loans" are predominant, indicating that there is a greater demand or desire for this loan type than for "Revolving loans."
+
+![Fig 7. Bar Chart comparing Employment Status to Loan Type](images/7.png)
+_Fig 7. Bar Chart comparing Employment Status to Loan Type_
+In Fig 7, a bar chart is utilized to depict the frequency distribution of loan types across different employment statuses. The chart reveals that "Cash loans" are preferred significantly more by all employment statuses compared to "Revolving loans." Furthermore, among the employment statuses, the "Working" category exhibits the highest frequency for both loan types. By examining the bar chart, it becomes evident that "Cash loans" are favoured across all employment statuses, irrespective of the specific category. This finding suggests a general preference for "Cash loans" over "Revolving loans" within the dataset. Additionally, the observation that the "Working" employment status demonstrates the highest frequency for both loan types indicates that individuals in this category have a higher tendency to seek both "Cash loans" and "Revolving loans."
 
 #### 3.2.3. CORRELATION ANALYSIS
 
-Correlation analysis is performed to identify relationships between variables. It measures the strength and direction of the association between two numerical variables. In this study, correlation analysis is conducted to explore the relationships between variables such as `Client_Income`, `Amount_Requested`, and `Annuity`.
+Correlation analysis is a statistical technique used to measure the strength and direction of the relationship between two numerical variables. It provides insights into how changes in one variable are associated with changes in another variable. In the context of this study, correlation analysis was employed to assess the relationship between the numerical variables intended for use in the model. By running a correlation analysis, the aim is to identify and evaluate the degree of correlation between pairs of variables. This analysis helps in determining if there is a strong or weak relationship between variables, as well as the nature of the relationship (positive or negative).
+The purpose of checking for correlations between variables is to avoid using highly correlated variables in the same model. High correlation between variables can lead to multicollinearity, which can negatively impact the model's accuracy and interpretability. In such cases, it is preferable to select variables that are less correlated with each other to ensure independence and reduce redundancy in the model. The aim was to select variables that exhibited minimal correlation with each other, ensuring independence and reducing redundancy in the model.
 
-The correlation matrix is used to visualize these relationships, helping to identify variables that are highly correlated. This step is essential in understanding how different variables interact and can guide the selection of features for the logistic regression model.
+Fig 8 below shows the correlation of the numerical variables.
+![Fig 8. Correlation Results of Numerical Variables](images/8.png)
+_Fig 8. Correlation Results of Numerical Variables_
+
+Based on the analysis presented in Figure 8, it is observed that the variables "Annuity" and "Amount_Requested" exhibit a high correlation. Consequently, including both variables in the model simultaneously is not recommended.
 
 #### 3.2.4. REGRESSION ANALYSIS
 
-Regression analysis is the core of the data mining phase. In this study, logistic regression is employed to predict the likelihood of a client defaulting on a loan. Logistic regression is chosen because it is well-suited for binary classification problems where the outcome variable is categorical.
-
-The logistic regression model is trained using the preprocessed data, and the coefficients of the model are analyzed to understand the influence of each predictor variable on the default status. The model's performance is evaluated using metrics such as accuracy, precision, recall, and the Area Under the Curve (AUC).
+A regression analysis was conducted to examine the relationship between the independent variables ('Number_of_children', 'Amount_Requested', 'Client_Income', 'Sex', 'Loan_Type', and 'Employment_Status') and the dependent variable ('Loan_Status'). The aim of this analysis was to determine the probability of defaulting a loan payment based on the provided independent variables. By employing regression analysis, insights were gained into the influence of each independent variable on the likelihood of loan default. The analysis sought to identify the significance and magnitude of the relationships between the independent variables and the dependent variable.
 
 ---
 
 ### 3.3. DATA POST-PROCESSING
 
-Data post-processing involves interpreting the results obtained from the data mining phase and deriving meaningful conclusions. This phase is critical in transforming the analytical findings into actionable insights.
+Data post-processing is the phase that comes after data modelling and analysis. To gain valuable insights and reach conclusions, it entails enhancing and interpreting the analysis's findings. During data post-processing, result interpretation was performed.
 
 #### 3.3.1. RESULT INTERPRETATION
 
-The results from the logistic regression model are interpreted to understand the factors that significantly contribute to loan default. The coefficients of the model provide insights into the direction and strength of the relationship between predictor variables and the likelihood of default.
+The logistic regression analysis results reveal interesting insights into the relationship between the independent variables and the likelihood of loan default. The number of children appears to have a minimal impact on default status, as the odds ratio estimate of 0.998 suggests a negligible decrease in the odds with each additional child. The amount requested does not seem to significantly influence default status, as indicated by an odds ratio estimate of 1.000. However, being female (odds ratio = 1.258) and opting for cash loans (odds ratio = 1.380) are associated with higher odds of default. In terms of employment status, being an entrepreneur shows no substantial effect (odds ratio = 1.004), while being a pensioner suggests slightly lower odds of default (odds ratio = 0.973). State servants, on the other hand, have moderately higher odds of default (odds ratio = 1.113) compared to individuals in a working status. These findings provide valuable insights into the factors that contribute to loan default and can inform future risk assessment and decision-making processes.
+This is shown in the figures 9 and 10 below.
 
-For example, a positive coefficient for `Amount_Requested` would indicate that as the loan amount increases, the likelihood of default also increases. Similarly, the analysis might reveal that clients with higher incomes have a lower probability of defaulting.
+![Fig 9.](images/9.png)
+_Fig 9. Logistic Regression Results_
 
-The model's predictions are also evaluated, and the overall performance is assessed to determine its effectiveness in predicting loan defaults. The insights gained from this analysis can be used to improve loan approval processes and mitigate financial risks.
+![Fig 10.](images/10.png)
+_Fig 10. ROC Curve_
+
+
 
 ---
 
-## 4. CONCLUSION
+## 4. CRITICAL COMPARISON BETWEEN SAS AND R STUDIO
+We carried out the analysis of this study with two analytical tools: SAS and R studio. This section explains the comparison of the two analytical tools as done in the analysis completed in section 3. The comparison will outline:
+-	Ease of user
+-	User-friendliness
+-	Data visualisation capability
+-	Statistical analysis capability
+-	Ease of installation
 
-In this project, a comprehensive analysis was conducted on the Loan Defaulter dataset using a systematic approach that involved data preprocessing, data mining, and data post-processing. The study utilized both SAS and R Studio to develop and compare logistic regression models aimed at predicting whether a client will default on a loan.
+### 4.1. SAS OnDemand for Academics
+SAS is a statistical software suite developed by SAS Institute for data management, advanced analytics, multivariate analysis, business intelligence, criminal investigation and predictive analytics. SAS is a software suite that can mine, alter, manage and retrieve data from a variety of sources and perform statistical analysis on it (Salkind and Neil, 2010). SAS provides a graphical point-and-click user interface for non-technical users and more through the SAS language (Salkind and Neil, 2010). SAS programs have DATA steps, which retrieve and manipulate data, and PROC steps, which analyze the data. Each step consists of a series of statements. SAS was developed at North Carolina State University from 1966 until 1976, when SAS Institute was incorporated. SAS OnDemand for Academics is a free cloud-based service provided by SAS Institute Inc. that offers learners and educators access to powerful SAS software for statistical analysis, data mining, and forecasting. 
+It replaces SAS University Edition as the primary software choice for learners and educators, effective August 2, 2021 (SAS OnDemand for Academic, 2023). The software includes point-and-click functionality, meaning there is no need to program, making it an accessible and easy-to-use tool for those new to statistical analysis or those who prefer a graphical user interface. SAS OnDemand for Academics is a user-friendly and accessible tool for learners and educators to access powerful SAS software for statistical analysis, data mining, and forecasting. Its inclusion of SAS Studio and its various tabs and features make it an effective tool for data analysis and troubleshooting (SAS on demand for academics, 2023).
 
-The analysis revealed key factors that influence loan default, such as the loan amount, client income, and employment status. These findings provide valuable insights for loan-providing companies to refine their risk assessment processes and make more informed decisions when approving loans.
+### 4.2. R Studio
+R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. Created by statisticians Ross Ihaka and Robert Gentleman, R is used among data miners, bioinformaticians and statisticians for data analysis and developing statistical software (Giorgi et all., 2022). R Studio is an integrated development environment (IDE) for the R programming language. It provides a user-friendly interface that allows users to develop, debug, and execute R code. If you use R Studio for your analysis, citing both R and RStudio in your work is important.
 
-The use of logistic regression proved to be effective in this context, offering a robust method for predicting categorical outcomes. The comparison of results from SAS and R Studio also highlighted the importance of using multiple tools in data analytics to ensure comprehensive and reliable results.
+### 4.3. Installation/Set up of SAS
+SAS OnDemand for Academics is a cloud-based version of the SAS software that can be accessed through a web browser. The software is hosted on SAS servers, which means that users do not need to install anything on their local machines (SAS OnDemand for Academic, 2023). This makes it easy for users to access the software from anywhere with an internet connection. However, users need to create an account and have an active internet connection to use the software. SAS OnDemand for Academics is available for free to students, faculty, and academic researchers. However, commercial organizations and non-academic researchers need to pay for a subscription to use the software (SAS OnDemand for Academic, 2023). SAS OnDemand for Academics is a cloud-based software that can be accessed through a web browser, so it does not have any specific system requirements for users' local machines.
+
+### 4.4. Installation/Set up of R Studio
+R Studio is a desktop application that users need to download and install on their local machines. Users can download R Studio from the official R Studio website, which provides installation instructions for Windows, Mac, and Linux systems (RStudio desktop, 2023). Once the software is installed, users can start using it offline, without the need for an internet connection. R Studio is an open-source software that is available for free to everyone (RStudio desktop, 2023). R Studio has specific system requirements that users must meet to ensure the software runs smoothly on their machines. For example, the latest version of R Studio (as of September 2021) requires at least 1GB of RAM and 1.5GB of free disk space on Windows, Mac, and Linux systems (RStudio desktop, 2023).
+
+### 4.5. General Usage
+SAS OnDemand for Academics provides free access to SAS software for statistical analysis, data mining, and forecasting. It is an online delivery model for teaching and learning purposes, and everyone can access it via the cloud free of charge (SAS OnDemand for Academic, 2023). Even if you are not affiliated with a college or university, you can still access SAS OnDemand for Academics to sharpen your analytics skills. On the other hand, R Studio is an open-source integrated development environment (IDE) for R programming. It is a powerful tool used for statistical computing and graphics, it provides a user-friendly interface for writing, executing, and debugging R code, as well as for visualizing data and results. In the retail and e-commerce industry, RStudio is used for risk assessment, creating marketing strategies, sales modelling, and targeted advertising to increase profits and sales (Miller, 2021).
+
+### 4.6. Data Pre-processing
+SAS OnDemand for Academics and R Studio are both popular software tools used in data analysis. Regarding data pre-processing, both SAS OnDemand for Academics and R Studio offer a range of functions and capabilities. The data importing, data cleaning, content exploration, data transformation and data encoding is preferable on R studio. R Studio supports the use of scripts and programming, allowing users to perform more complex data pre-processing tasks using R code. SAS OnDemand for Academics also offers access to powerful statistical analysis, data mining, and forecasting tools, making it a comprehensive solution for data analysis.
+
+### 4.7. Data Post-processing
+SAS software is renowned for its data analysis capabilities, and users can perform data post-processing using the various tools provided by the software. SAS OnDemand for Academics: Studio provides a user-friendly point-and-click interface that does not require programming to access its functions. R Studio provides a wide range of statistical analysis tools, data visualization tools, and machine learning capabilities that allow users to perform data post-processing tasks efficiently. With R Studio, you can access and use a variety of statistical packages and functions, including post-processing tools, to analyze and manipulate data, making R studio preferable in terms of visualization technique. 
+
+| **Standard**             | **SAS** | **R Studio** |
+|--------------------------|:-------:|:------------:|
+| **Installation or set up**  |    5    |      4       |
+| **User friendliness**       |    5    |      4       |
+| **Efficiency**              |    4    |      5       |
+| **General usage**           |    3    |      5       |
+| **Data importing**          |    4    |      5       |
+| **Content Exploration**     |    5    |      5       |
+| **Data cleaning**           |    4    |      5       |
+| **Data transformation**     |    5    |      5       |
+| **Data encoding**           |    3    |      5       |
+| **Correlation analysis**    |    5    |      4       |
+| **Distributive analysis**   |    4    |      5       |
+| **Regression analysis**     |    5    |      5       |
+| **Data visualization**      |    3    |      5       |
+| **TOTAL**                   |   55    |     62       |
+_Table 3. Table of Comparison_
+
+In summary, SAS OnDemand is used for statistical analysis, data mining, and forecasting making it a comprehensive solution for data analysis. It is a powerful tool used for statistical computing and graphics, it provides a user-friendly interface for writing, executing, as well as for visualizing data and results making it preferable. For the analysis carried out in this project, our preference would be to use R studio over SAS.
+ 
+
+## 5. CONCLUSION
+This study set out to explore a loan application dataset, the aim of this analysis was to determine the likelihood of a client defaulting on a loan facility based on the provided independent variables like the number of children, the amount they are requesting, their income type, sex, loan type, and their employment status. In our analysis using a logistic regression model, we find out that the number of children a client has minimal effect on their chance of defaulting when a loan facility is approved for them. 
+The amount of a client request does not have a strong influence on default status. It means that asking for more or less money doesn't make a big difference in whether someone will default or not. However, being female and choosing cash loans are associated with a higher likelihood of defaulting. This means that women and people who choose cash loans are more likely to have trouble making their payments. 
+When it comes to employment status, being an entrepreneur doesn't have a significant effect on defaulting, while being a pensioner slightly reduces the chances of defaulting. While state servants have a somewhat higher chance of defaulting compared to people who are in working status. Our findings provide valuable insights into the factors that contribute to loan default and can inform future risk assessment and decision-making processes. Therefore, a loan facility company can use these factors to determine the approval or disapproval of a loan to a potential client.
+ 
+## 6. APPENDIX
+### 6.1. DATA PRE-PROCESSING – SAS CODES
+![Fig 11](images/11.png)
+![Fig 12](images/12.png)
+![Fig 13](images/13.png)
+![Fig 14](images/14.png)
+![Fig 15](images/15.png)
+
+### 6.2. DATA MINING – SAS CODES
+![Fig 16](images/16.png)
+![Fig 17](images/17.png)
+![Fig 18](images/18.png)
+![Fig 19](images/19.png)
+
+### 6.3. DATA PRE-PROCESSING – R STUDIO CODES
+![Fig 20](images/20.png)
+![Fig 21](images/21.png)
+
+### 6.4 DATA MINING – R STUDIO CODES
+![Fig 22](images/22.png)
+![Fig 23](images/23.png)
+![Fig 24](images/24.png)
+![Fig 25](images/25.png)
+![Fig 26](images/26.png)
+![Fig 27](images/27.png)
+![Fig 28](images/28.png)
+![Fig 29](images/29.png)
+
+### 6.5. RESULTS – R STUDIO
+![Fig 30](images/30.png)
+![Fig 31](images/31.png)
+![Fig 32](images/32.png)
+![Fig 33](images/33.png)
+![Fig 34](images/34.png)
+![Fig 35](images/35.png)
+
+## 7. REFERENCES
+-  Gary, K. (2020) Using Design Analytics to Identify and Solve Actual Problems, Blogs.oracle.com. Modern Marketing Blog. Available at: https://blogs.oracle.com/marketingcloud/post/using-design-analytics-to-identify-and-solve-actual-problems#:~:text=Design%20analytics%20is%20a%20method,analysts%20provide%20solutions%2C%20not%20facts. (Accessed: May 4, 2023).
+-  Giorgi, Federico M.; Ceraolo, Carmine; Mercatelli, Daniele (27 April 2022). "The R Language: An Engine for Bioinformatics and Data Science". Life. 12 (5): 648. Bibcode:2022Life...12..648G. doi:10.3390/life12050648. ISSN 2075-1729. PMC 9148156. PMID 35629316.
+Libguides: SAS tutorials: Using SAS ondemand for academics (no date) Using SAS OnDemand for Academics - SAS Tutorials - LibGuides at Kent State University. Available at: https://libguides.library.kent.edu/SAS/OnDemand (Accessed: 12 May 2023).
+-  Miller, S. (2021) What is R used for? exploring the R programming language, Codecademy Blog. Available at: https://www.codecademy.com/resources/blog/what-is-r-used-for/ (Accessed: 12 May 2023).
+-  RStudio desktop (2023) Posit. Available at: https://posit.co/download/rstudio-desktop/ (Accessed: 12 May 2023). 
+-  Salkind, Neil (2010). Encyclopedia of Research Design Encyclopedia of research design. doi:10.4135/9781412961288. ISBN 9781412961271.
+-  SAS ondemand for academics (no date) SAS OnDemand for Academics | SAS UK. Available at: https://www.sas.com/en_gb/software/on-demand-for-academics.html (Accessed: 12 May 2023).
+
 
 ---
 
