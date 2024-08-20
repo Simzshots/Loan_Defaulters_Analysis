@@ -222,8 +222,8 @@ SAS OnDemand for Academics and R Studio are both popular software tools used in 
 ### 4.7. Data Post-processing
 SAS software is renowned for its data analysis capabilities, and users can perform data post-processing using the various tools provided by the software. SAS OnDemand for Academics: Studio provides a user-friendly point-and-click interface that does not require programming to access its functions. R Studio provides a wide range of statistical analysis tools, data visualization tools, and machine learning capabilities that allow users to perform data post-processing tasks efficiently. With R Studio, you can access and use a variety of statistical packages and functions, including post-processing tools, to analyze and manipulate data, making R studio preferable in terms of visualization technique. 
 
-| **Standard**             | **SAS** | **R Studio** |
-|--------------------------|:-------:|:------------:|
+| **Standard**                | **SAS** | **R Studio** |
+|-----------------------------|:-------:|:------------:|
 | **Installation or set up**  |    5    |      4       |
 | **User friendliness**       |    5    |      4       |
 | **Efficiency**              |    4    |      5       |
@@ -238,6 +238,7 @@ SAS software is renowned for its data analysis capabilities, and users can perfo
 | **Regression analysis**     |    5    |      5       |
 | **Data visualization**      |    3    |      5       |
 | **TOTAL**                   |   55    |     62       |
+
 _Table 3. Table of Comparison_
 
 In summary, SAS OnDemand is used for statistical analysis, data mining, and forecasting making it a comprehensive solution for data analysis. It is a powerful tool used for statistical computing and graphics, it provides a user-friendly interface for writing, executing, as well as for visualizing data and results making it preferable. For the analysis carried out in this project, our preference would be to use R studio over SAS.
