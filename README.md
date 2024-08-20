@@ -117,13 +117,19 @@ In this phase, the categorical variables were encoded using numerical values, ma
 
 ### 3.2. DATA MINING
 
-The data mining phase involves performing various analyses to uncover patterns, relationships, and trends in the data. This step is crucial in identifying the key factors that influence whether a client will default on a loan. The analyses conducted in this phase include descriptive analysis, distribution analysis, correlation analysis, and regression analysis.
+The data mining phase involves performing various analyses to uncover patterns, relationships, and trends in the data. This step is crucial in identifying the key factors that influence whether a client will default on a loan. The analyses conducted in this phase include descriptive analysis, distribution analysis, correlation analysis, and regression analysis. These algorithms enable the exploration and extraction of valuable insights from the data, facilitating a deeper understanding of its underlying patterns and relationships. By leveraging data mining techniques, organizations can derive actionable knowledge and gain a competitive advantage in various domains.
 
-#### 3.2.1. DESCRIPTIVE ANALYSIS
+#### 3.2.1. DISTRIBUTION ANALYSIS
 
-Descriptive analysis is the initial stage of data exploration, where the data is summarized to understand its general characteristics. In this step, basic statistical measures such as mean, median, mode, standard deviation, and range are calculated for numerical variables, and frequency distributions are generated for categorical variables.
+Distribution analysis is essential for exploring and analysing data. It is analysing a variable's distribution within a dataset to learn more about the frequency and proportion of each observation. It is possible for academics to comprehend the prevalence and representation of various observations by analysing the distribution of a variable. It assists in determining the dataset's diversity and balance and can shed light on biases or problems with data quality. This was carried out in this analysis to understand the distribution of the variables in the dataset.
 
-For example, the mean client income, the distribution of loan types, and the proportion of male and female clients are examined. This analysis helps in getting an overview of the data, identifying any outliers, and understanding the overall trends.
+Figs 3 and 4 below show the result of the PROC FREQ procedure on the dataset.
+
+![Fig 3. Distribution of the data set](images/3.png)
+_Fig 3. Distribution of the data set_
+
+![Fig 3. Distribution of the data set](images/4.png)
+_Fig 4. Distribution of the data set_
 
 #### 3.2.2. DISTRIBUTION ANALYSIS
 
