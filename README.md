@@ -56,7 +56,7 @@ The UML has 3 stages, namely:
   
 The analytics design is represented by a UML diagram in Fig 1 given below.
 ![UML Diagram](images/UML.png)
-Fig 1. UML Diagram
+_Fig 1. UML Diagram_
 
 ---
 
@@ -76,6 +76,7 @@ In this report, the concept of content exploration is examined, involving a comp
 
 Here, some contents have been presented below in Figure 2, which can assist in gaining insights into the dataset. These contents offer valuable information that can contribute to a better understanding of the dataset and its underlying characteristics. By examining the provided contents, significant insights can be derived, enabling a deeper understanding of the dataset and its potential implications.
 
+![Figure 2- Contents of data set.](images/Content.png)
 _Figure 2- Contents of data set._  
 In Figure 2, the utilization of the PROC CONTENTS procedure provides a comprehensive and detailed breakdown of the dataset. This step was crucial in gaining a thorough understanding of the dataset and making informed decisions regarding subsequent analysis. By conducting the PROC CONTENTS procedure, a deeper comprehension of the dataset's structure and characteristics was obtained. It allowed for a comprehensive overview of all the variables, their respective data types, and the formats in which the data is represented.
 
