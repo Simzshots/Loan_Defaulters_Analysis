@@ -57,6 +57,7 @@ The UML has 3 stages, namely:
 The analytics design is represented by a UML diagram in Fig 1 given below.
 ![UML Diagram](images/UML.png)
 Fig 1. UML Diagram
+
 ---
 
 ## 3. DATA ANALYTICS  
